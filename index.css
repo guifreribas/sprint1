@@ -1,0 +1,177 @@
+:root {
+    --sm: 8px;
+    --md: 16px;
+    --lg: 24px;
+    --xl: 48px;
+    --xxl: 96px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    margin: auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--md);
+    background-color: #fefefe;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    padding: var(--md);
+}
+
+.topNavbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: var(--md) solid black;
+    background-color: #2E405B;
+    gap: var(--md);
+}
+
+.topNavbar>div {
+    background-color: #EA5455;
+    padding: var(--sm);
+}
+
+.nav {
+    width: 70%;
+    border: 0px;
+}
+
+.logo,
+.social {
+    width: 15%;
+}
+
+.logo {
+    transition: background-color 0.2s ease-in, scale 0.2s ease-in;
+}
+
+.logo:hover {
+    background-color: #F8B400;
+    scale: 1.1;
+    cursor: pointer;
+
+}
+
+.bottomNavbar {
+    width: 100%;
+    display: flex;
+    width: 100%;
+    border: var(--md) solid black;
+    border-top: none;
+    background-color: #FF8B00;
+}
+
+.banner {
+    width: 100%;
+    background-color: #FED700;
+    font-size: var(--lg);
+    font-weight: bold;
+    padding: var(--sm);
+}
+
+
+main {
+    display: flex;
+    width: 100%;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--md);
+    background-color: #4F4F6A;
+    width: 70%;
+    border: var(--md) solid black;
+}
+
+.article {
+    background-color: #206CB0;
+    padding: var(--sm);
+}
+
+.navegacion {
+    width: 100%;
+    grid-column: 1/3;
+    background-color: #71A3C4;
+    padding: var(--sm);
+}
+
+.aside {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sm);
+    background-color: #F63F51;
+    border: var(--md) solid black;
+    border-left: none;
+}
+
+.publicidad {
+    background-color: #FED700;
+    padding: var(--sm);
+}
+
+.pie {
+    width: 100%;
+    display: flex;
+    border: var(--md) solid black;
+    background-color: #F0E78C;
+    padding: var(--sm);
+}
+
+@media screen and (width < 768px) {
+
+    body {
+        background-color: #F0E78C;
+    }
+
+    .topNavbar {
+        flex-direction: column;
+    }
+
+    .logo,
+    .social,
+    .nav {
+        width: 100%;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .aside {
+        width: 100%;
+        border: var(--md) solid black;
+        border-top: none;
+    }
+}
+
+@media screen and (width < 480px) {
+    body {
+        background-color: rosybrown;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+}
